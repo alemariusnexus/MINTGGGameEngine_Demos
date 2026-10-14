@@ -1,0 +1,15 @@
+{
+	"keymap" : {
+		"Left"    : "left",
+		"Right"   : "right",
+        "Up"      : "up",
+        "Down"    : "down",
+        "Space"   : "a",
+        "Control" : "b",
+        "Return"  : "start",
+        "Alt"     : "joy"
+    },
+	"screen" : {
+	  "transformMode" : "fast"
+	}
+}
