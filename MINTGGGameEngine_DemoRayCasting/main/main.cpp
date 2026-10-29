@@ -17,7 +17,7 @@ Text debugText;
 GameObject moveHandle;
 
 // MCP2300X IO expander
-GPIODeviceMCP2300X ioExpander(DEMO_RAYCASTING_I2C_PIN_SCL, DEMO_RAYCASTING_I2C_PIN_SDA);
+GPIODeviceMCP230XX ioExpander(1);
 
 
 void spawnRayTestCircle(float x, float y, int r)
@@ -35,7 +35,7 @@ void spawnRayTestRect(float x, float y, int w, int h)
 }
 
 void gameSetup() {
-  ioExpander.begin();
+  ioExpander.init();
 
   // Define buttons
   game.input().defineButton("up", 0, ioExpander);

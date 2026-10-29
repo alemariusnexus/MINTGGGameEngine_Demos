@@ -19,7 +19,7 @@ int score = 0;
 Text scoreText;
 
 // MCP2300X IO EXPANDER
-GPIODeviceMCP2300X ioExpander(DEMO_PLATFORMER_I2C_PIN_SCL, DEMO_PLATFORMER_I2C_PIN_SDA);
+GPIODeviceMCP230XX ioExpander(1);
 
 
 void spawnPlatform(float x, float y, float w) {
@@ -41,7 +41,7 @@ void spawnCoin(float cx, float cy) {
 }
 
 void gameSetup() {
-  ioExpander.begin();
+  ioExpander.init();
 
   // Define buttons
   game.input().defineButton("up", 0, ioExpander);
